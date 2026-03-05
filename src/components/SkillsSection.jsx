@@ -39,7 +39,7 @@ const skillCategories = [
   },
 ];
 
-const SkillBar = ({ name, level, delay }: { name: string; level: number; delay: number }) => {
+const SkillBar = ({ name, level, delay }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 

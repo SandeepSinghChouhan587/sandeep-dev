@@ -57,9 +57,7 @@ const ProjectsSection = () => {
               transition={{ duration: 0.5, delay: i * 0.15 }}
               className="glass-card rounded-xl overflow-hidden hover-lift group"
             >
-              {/* Gradient top bar */}
               <div className="h-1 w-full" style={{ background: "var(--gradient-primary)" }} />
-
               <div className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                   {project.title}
@@ -67,7 +65,6 @@ const ProjectsSection = () => {
                 <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                   {project.description}
                 </p>
-
                 <div className="mb-4">
                   <h4 className="text-xs font-semibold text-foreground uppercase tracking-wider mb-2">Key Features</h4>
                   <ul className="space-y-1">
@@ -79,7 +76,6 @@ const ProjectsSection = () => {
                     ))}
                   </ul>
                 </div>
-
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {project.tech.map((t) => (
                     <span
@@ -90,18 +86,11 @@ const ProjectsSection = () => {
                     </span>
                   ))}
                 </div>
-
                 <div className="flex gap-3">
-                  <a
-                    href={project.github}
-                    className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <a href={project.github} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors">
                     <Github size={14} /> GitHub
                   </a>
-                  <a
-                    href={project.live}
-                    className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <a href={project.live} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors">
                     <ExternalLink size={14} /> Live Demo
                   </a>
                 </div>

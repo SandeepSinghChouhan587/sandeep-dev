@@ -7,9 +7,8 @@ const ContactSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Placeholder — would integrate with backend
     alert("Thanks for reaching out! I'll get back to you soon.");
     setForm({ name: "", email: "", message: "" });
   };
@@ -39,7 +38,6 @@ const ContactSection = () => {
             <p className="text-muted-foreground mb-8 leading-relaxed">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
-
             <div className="space-y-4">
               <a href="mailto:sandeep@example.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
