@@ -8,7 +8,7 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const cards = [
-    { icon: GraduationCap, title: "Education", text: "B.Tech in Computer Science (Expected 2026)" },
+    { icon: GraduationCap, title: "Education", text: "B.Tech in Computer Science (Expected 2026) (Current CGPA : 7.2)" },
     { icon: MapPin, title: "Location", text: "Indore, India" },
     { icon: Code2, title: "Focus", text: "MERN Stack Development" },
     { icon: Target, title: "Goal", text: "Build scalable web applications" },

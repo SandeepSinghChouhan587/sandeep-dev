@@ -4,28 +4,28 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Pinterest Clone",
-    description: "A full-featured Pinterest-inspired image sharing platform with user authentication, boards, and pin management.",
-    tech: ["Node.js", "Express", "MongoDB", "EJS", "Passport.js"],
-    features: ["User Auth & Sessions", "Image Upload & Boards", "Responsive Grid Layout"],
-    github: "#",
-    live: "#",
+    title: "Shree Status Quotes ",
+    description: "A responsive MERN stack web application for discovering and sharing motivational and social media status quotes.",
+    tech: ["Reactjs","Node.js", "Express", "MongoDB","Tailwind CSS","AWS"],
+    features: ["Admin Authentication", "Image Upload & Boards", "Responsive Grid Layout"],
+    github: "https://github.com/SandeepSinghChouhan587/shreestatusquotesfrontend.git",
+    live: "https://shreestatusquotes.vercel.app/",
   },
   {
-    title: "Swiggy Clone",
-    description: "A responsive food delivery app UI clone built with React, featuring restaurant listings, cart system, and dynamic menus.",
-    tech: ["React.js", "Tailwind CSS", "REST API", "React Router"],
+    title: "Online Grocery Application",
+    description: "Full-stack e-commerce web application for ordering grocery items online",
+    tech: ["React.js", "Tailwind CSS", "REST API", "React Router","Expressjs","Node.js","AWS"],
     features: ["Live API Integration", "Cart Management", "Search & Filters"],
-    github: "#",
-    live: "#",
+    github: "https://github.com/SandeepSinghChouhan587/Online-Grocery-Application.git",
+    
   },
   {
-    title: "Categorizer",
-    description: "An intelligent content categorization tool powered by AI APIs, built with the MERN stack for seamless user experience.",
+    title: "Chandani AI Chatbot",
+    description: "An AI-powered chatbot web application that responds to user queries using the Groq AI API.",
     tech: ["React.js", "Node.js", "Express", "MongoDB", "AI API"],
-    features: ["AI-Powered Categorization", "CRUD Operations", "Real-time Results"],
-    github: "#",
-    live: "#",
+    features: ["AI-Powered Chatbot", "Groq AI API Integration", "Real-time Chat Interface","Responsive UI"],
+    github: "https://github.com/SandeepSinghChouhan587/chandniaifrontend.git",
+    live: "https://chandani-ai-frontend.vercel.app/",
   },
 ];
 
@@ -90,9 +90,12 @@ const ProjectsSection = () => {
                   <a href={project.github} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors">
                     <Github size={14} /> GitHub
                   </a>
-                  <a href={project.live} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors">
+                  {
+                    project.live ?(<a href={project.live} className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors">
                     <ExternalLink size={14} /> Live Demo
-                  </a>
+                  </a>) : ""
+                  }
+                  
                 </div>
               </div>
             </motion.div>

@@ -22,7 +22,8 @@ const ResumeSection = () => {
             Download my resume to see my complete experience, education, and skills.
           </p>
           <a
-            href="#"
+            href="/Resume-Sandeep-Singh-Chouhan.docx"
+            download
             className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity text-lg"
           >
             <Download size={20} />

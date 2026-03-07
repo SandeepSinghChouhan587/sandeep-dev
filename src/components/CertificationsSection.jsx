@@ -3,9 +3,11 @@ import { useRef } from "react";
 import { Award } from "lucide-react";
 
 const certs = [
-  { title: "Python Certification", issuer: "Certified Python Developer", icon: "🐍" },
-  { title: "JavaScript Certification", issuer: "Certified JavaScript Developer", icon: "⚡" },
-  { title: "React.js Certification", issuer: "Certified React Developer", icon: "⚛️" },
+  { title: "JavaScript Certification", issuer: "Udemy online Certification", icon: "" },
+  { title: "React.js Certification", issuer: "Udemy online Certification", icon: "" },
+  { title: "Python Certification", issuer: "Udemy online Certification", icon: "" },
+  { title: "Foundation of Cloud IoT Edge ML", issuer: "NPTEL Online Certification, IIT Kanpur   (Silver medal) ", icon: "" },
+  { title: "Practical Cyber Security for Cyber Security Practitioners , ", issuer: "NPTEL Online Certification, IIT Kanpur (Gold medal)", icon: "" },
 ];
 
 const CertificationsSection = () => {

@@ -1,15 +1,36 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+const service_id = import.meta.env.VITE_SERVICE_ID;
+const template_id = import.meta.env.VITE_TEMPLATE_ID;
+const public_key = import.meta.env.VITE_PUBLIC_KEY;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thanks for reaching out! I'll get back to you soon.");
+    emailjs.send(
+    service_id,
+    template_id,
+    {
+      name: form.name,
+      email: form.email,
+      message: form.message,
+    },
+    public_key
+  )
+  .then(() => {
+    toast.success("Thanks for reaching out! I'll get back to you soon.")
+  })
+  .catch(() => {
+    toast.error("Failed to send message");
+  });
+
     setForm({ name: "", email: "", message: "" });
   };
 
@@ -39,23 +60,23 @@ const ContactSection = () => {
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             <div className="space-y-4">
-              <a href="mailto:sandeep@example.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:sandeepchouhan.6261@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Mail className="text-primary" size={18} />
                 </div>
-                sandeep@example.com
+                sandeepchouhan.6261@gmail.com
               </a>
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://github.com/SandeepSinghChouhan587/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Github className="text-primary" size={18} />
                 </div>
-                GitHub Profile
+                SandeepSinghChouhan587
               </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/sandeepsinghchouhan6261/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Linkedin className="text-primary" size={18} />
                 </div>
-                LinkedIn Profile
+                sandeepsinghchouhan6261
               </a>
             </div>
           </motion.div>
