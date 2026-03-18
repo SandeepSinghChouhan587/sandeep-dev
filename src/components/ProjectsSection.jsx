@@ -15,7 +15,7 @@ features: [
   "Responsive UI for All Devices"
            ],
     github: "https://github.com/SandeepSinghChouhan587/categorizer.git",
-    live: "https://categorizerx.vercel.app/",
+    live: "https://categorizerx.netlify.app/",
   },
   {
     title: "Shree Status Quotes ",
