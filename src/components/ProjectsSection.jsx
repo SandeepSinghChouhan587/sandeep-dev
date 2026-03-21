@@ -4,6 +4,20 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
+    title: "Categorizer",
+description: "A full-stack MERN application that categorizes YouTube and Instagram content using AI, allowing users to organize, search, and filter saved posts efficiently.",
+tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+features: [
+  "User Authentication & Authorization",
+  "AI-Based Content Categorization",
+  "Save & Manage Social Media Links",
+  "Search & Filter by Categories",
+  "Responsive UI for All Devices"
+           ],
+    github: "https://github.com/SandeepSinghChouhan587/categorizer.git",
+    live: "https://categorizerx.netlify.app/",
+  },
+  {
     title: "Shree Status Quotes ",
     description: "A responsive MERN stack web application for discovering and sharing motivational and social media status quotes.",
     tech: ["Reactjs","Node.js", "Express", "MongoDB","Tailwind CSS","AWS"],
